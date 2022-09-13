@@ -1,1 +1,1 @@
-## 0x00. Typescript
+## holbertonschool web react
