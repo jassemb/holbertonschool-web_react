@@ -12,12 +12,12 @@ const student1: Student = {
     location: "sfax"
 };
 const student2: Student = {
-    firstName: "ali",
-    lastName: "ben ali",
-    age: 18,
-    location: "tunis"
+  firstName: "ali",
+  lastName: "ben ali",
+  age: 18,
+  location: "tunis"
 };
-const studentList = [student1, student2];
+const studentList = [student1,student2];
 
 const table = document.createElement('table');
 const tbody = document.createElement('tbody');
