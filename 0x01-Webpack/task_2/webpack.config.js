@@ -8,14 +8,25 @@ module.exports = {
     path: path.resolve(__dirname, 'public')
   },
   module: {
-  rules: [
-    {
-      test: /\.css$/i,
-      use: ["style-loader", "css-loader"],
-    },
-    {
-      test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-      type: "asset/rouserce",
-    },
-  ],},
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(jpg|gif|png|jpeg|svg)$/i,
+        use: [
+          "file-loader",
+          {
+            loader: "image-webpack-loader",
+            options: {
+              bypassOnDebug: true,
+              disable: true,
+            },
+          },
+        ],
+      }
+      ],
+
+  },
 };   
