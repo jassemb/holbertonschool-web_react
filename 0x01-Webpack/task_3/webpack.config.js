@@ -14,6 +14,11 @@ module.exports = {
   //   path: path.resolve(__dirname, 'public'),
 
   // },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   devServer: {
     contentBase: path.join(__dirname, './public'),
     compress: true,
