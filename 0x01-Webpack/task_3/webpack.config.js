@@ -3,34 +3,32 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: {
-    header: './modules/header/header.js',
-    body: './modules/body/body.js',
-    footer: './modules/footer/footer.js',
-  },
-output: {
-   filename: "bundle.js",
-    path: path.resolve(__dirname, 'public'),
-
-   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
+    mode: 'development',
+    entry : path.resolve(__dirname, 'js/dashboard_main.js'),
+    output: {
+      path: path.resolve(__dirname, 'public'),
+      filename: 'bundle.js'
     },
-  },
-  devServer: {
-    contentBase: path.join(__dirname, './public'),
-    compress: true,
-    port: 8564,
-  },
-  plugins: [
-    new HTMLWebpackPlugin({
-      filename: 'public/index.html'
-    }),
-    new CleanWebpackPlugin()
-  ],
-  module: {
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
+    },
+    performance: {
+      maxAssetSize: 1000000,
+    },
+    devServer: {
+      contentBase: path.join(__dirname, './public'),
+      compress: true,
+      port: 8564,
+    },
+    plugins: [
+      new HTMLWebpackPlugin({
+        filename: 'public/index.html'
+      }),
+      new CleanWebpackPlugin()
+    ],
+    module: {
     rules: [
       {
         test: /\.css$/i,
@@ -49,7 +47,6 @@ output: {
           },
         ],
       }
-    ],
-
-  },
-};   
+    ]
+  }
+}
