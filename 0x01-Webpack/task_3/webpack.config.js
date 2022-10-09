@@ -9,11 +9,11 @@ module.exports = {
     body: './modules/body/body.js',
     footer: './modules/footer/footer.js',
   },
-  // output: {
-  //   filename: "bundle.js",
-  //   path: path.resolve(__dirname, 'public'),
+output: {
+   filename: "bundle.js",
+    path: path.resolve(__dirname, 'public'),
 
-  // },
+   },
   optimization: {
     splitChunks: {
       chunks: 'all',
