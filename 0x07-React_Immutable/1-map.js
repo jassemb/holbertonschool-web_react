@@ -3,7 +3,7 @@ import { Map } from 'immutable';
 const getImmutableObject = (object) => Map(object);
 
 export default getImmutableObject;
-const obj ={
+const obj = {
     fear: true,
     smell: -1033575916.9145899,
     wall: false,
