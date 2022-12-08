@@ -9,4 +9,4 @@ const obj = {
     wall: false,
     thing: -914767132
 }
-console.log(getImmutableObject(obj))
+console.log(getImmutableObject(obj));
